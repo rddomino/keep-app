@@ -5,7 +5,6 @@ import { SearchOutlined as SearchIcon, ClearOutlined } from '@mui/icons-material
 import ListItemIcon from '@mui/material/ListItemIcon'
 
 import { DataContext, ContextType } from '../context/DataProvider'
-import { INote } from '../../types'
 
 const Container = styled(Box)`
     display: flex;
@@ -28,7 +27,7 @@ const SearchBox = () => {
     const [isFocussed, setFocussed] = useState<Boolean>(false)
     const [filterText, setFilterText] = useState<String>()
 
-    const { notes, setFormOpen, filterNotes, setFilterNotes } = useContext<ContextType>(DataContext)
+    const { notes, setFormOpen, setFilterNotes } = useContext<ContextType>(DataContext)
 
     const handleClickAway = () => {
         setFocussed(false)
